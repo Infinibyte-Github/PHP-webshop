@@ -65,13 +65,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Login successful! Welcome, {$email}!";
 
             // Redirect user to home page after 5 seconds
-            header("refresh:5;url=../index.php");
+            header("refresh:3;url=../index.php");
         } else {
             // Invalid credentials
             echo "Invalid email or password. Please try again.";
 
             // Redirect user to login page after 5 seconds
-            header("refresh:5;url=index.php");
+            header("refresh:3;url=index.php");
         }
     } else {
         // Invalid form data

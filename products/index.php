@@ -37,20 +37,15 @@ session_start();
                 echo '<p>' . $product['description'] . '</p>';
                 echo '<p>€ ' . $product['price'] . '</p>';
                 // add to cart button
-                echo '<form action="<?php echo $_SERVER[\'PHP_SELF\']; ?>" method="post">';
+                echo '<form action="../include/cart.php" method="post">';
                 echo '<input type="hidden" name="id" value="' . $product['productID'] . '">';
                 echo '<input type="submit" value="Add to cart" class="btn">';
+                echo '</form>';
                 echo '</div>';
             }
 
             // Close connection
             mysqli_close($link);
-
-            if (isset($_POST['id'])) {
-                // Add product to cart
-                include '../include/cart.php';
-                addToCart($_POST['id']);
-            }
             ?>
         </div>
         <!-- Add more product cards as needed -->

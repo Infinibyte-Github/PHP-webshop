@@ -7,5 +7,5 @@ session_destroy();
 echo "You have been logged out. Redirecting to the home page...";
 
 // Redirect to the home page
-header("refresh:5;url=../index.php");
+header("refresh:3;url=../index.php");
 ?>

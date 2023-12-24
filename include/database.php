@@ -16,5 +16,5 @@ try {
         throw new Exception("Error: no connection can be made to the database");
     }
 } catch (Exception $e) {
-    echo "<script> console.log(" + $e->getMessage() + "); </script>";
+    echo "<script>alert(" + $e->getMessage() + ");</script>";
 }

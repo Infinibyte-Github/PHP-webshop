@@ -58,13 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['userID'] = $row['userID'];
 
             // Redirect user to home page after 5 seconds
-            header("refresh:5;url=../index.php");
+            header("refresh:3;url=../index.php");
         } else {
             // Registration failed
             echo "Registration failed. Please try again.";
 
             // Redirect user to registration page after 5 seconds
-            header("refresh:5;url=../signup.php");
+            header("refresh:3;url=../signup.php");
         }
     } else {
         // Invalid form data
