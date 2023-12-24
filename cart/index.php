@@ -58,6 +58,14 @@ session_start();
 
                     // Display the total price
                     echo "<p>Total price: €$totalPrice</p>";
+
+                    // Pay button
+                    echo '<form action="../include/pay.php" method="post">';
+                    echo '<input type="hidden" name="totalPrice" value="' . $totalPrice . '">';
+                    echo '<input type="submit" value="Pay" class="btn">';
+                    echo '</form>';
+
+                    
                 } else {
                     echo "<p>You have no items in your shopping cart.</p>";
                 }

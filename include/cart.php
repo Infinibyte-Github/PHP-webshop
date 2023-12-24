@@ -4,6 +4,10 @@ session_start();
 // Connect to the database
 include 'database.php';
 
+// check if the user is logged in
+if (!isset($_SESSION['userID'])) {
+    header("refresh:0;url=../login/index.php");
+}
 
 // Get the product ID
 $id = $_POST['id'];

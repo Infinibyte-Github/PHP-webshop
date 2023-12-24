@@ -20,7 +20,7 @@ session_start();
     <section class="welcome">
         <h2>Welcome to Electronics Superstore</h2>
         <p>Explore the latest in technology and find the perfect electronics for your needs.</p>
-        <a href="./products.php" class="btn">Shop Now</a>
+        <a href="products/index.php" class="btn">Shop Now</a>
     </section>
 
     <section class="featuredProducts">

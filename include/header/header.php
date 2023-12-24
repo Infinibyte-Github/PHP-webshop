@@ -14,10 +14,35 @@
     </div>
 
     <div class="middleDivHeader">
-        <form action="#" method="get">
-            <input type="text" name="search" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
+        <input id="search" type="text" name="search" placeholder="Search...">
+
+        <div id="response"></div>
+
+        <!-- import ajax -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- ajax search -->
+        <script>
+            $(document).ready(function() {
+                $("#search").keyup(function() {
+                    var search = $(this).val();
+                    if (search != "") {
+                        $.ajax({
+                            url: '/PHP-webshop/include/header/search.php',
+                            method: 'POST',
+                            data: {
+                                search:search
+                            },
+                            success: function(response) {
+                                $("#response").html(response);
+                            }
+                        });
+                    } else {
+                        $("#response").html("");
+                    }
+                });
+            });
+        </script>
     </div>
 
     <div class="rightDivHeader">
@@ -26,12 +51,10 @@
             echo '<a href="/PHP-webshop/cart/" class="btn">Shopping Cart</a>';
             echo '<a href="/PHP-webshop/profile/" class="btn">Profile</a>';
             echo '<a href="/PHP-webshop/logout/" class="btn">Logout</a>';
-        }
-        else if (isset($_SESSION['userID']) && $_SESSION['admin'] == 1) {
+        } else if (isset($_SESSION['userID']) && $_SESSION['admin'] == 1) {
             echo '<a href="/PHP-webshop/admin/" class="btn">Admin</a>';
             echo '<a href="/PHP-webshop/logout/" class="btn">Logout</a>';
-        }
-        else {
+        } else {
             echo '<a href="/PHP-webshop/login/" class="btn">Login</a>';
             echo '<a href="/PHP-webshop/signup/" class="btn">Sign Up</a>';
         }
