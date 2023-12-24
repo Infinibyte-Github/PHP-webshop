@@ -50,3 +50,22 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
 }
+
+/* fancy css for the search */
+input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff6600;
+}
+
+/* css for the suggestion list */
+#response {
+    list-style: none;
+    background-color: #fff;
+}
