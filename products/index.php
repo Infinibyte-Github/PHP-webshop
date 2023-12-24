@@ -25,7 +25,7 @@ session_start();
             include '../include/database.php';
 
             // Get all products from the database
-            $query = 'SELECT * FROM products';
+            $query = 'SELECT * FROM products WHERE active = 1';
             $result = mysqli_query($link, $query);
             $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

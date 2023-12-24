@@ -30,7 +30,7 @@ session_start();
             include './include/database.php';
 
             // display 3 random products
-            $query = 'SELECT * FROM products ORDER BY RAND() LIMIT 3';
+            $query = 'SELECT * FROM products WHERE active = 1 ORDER BY RAND() LIMIT 3';
             $result = mysqli_query($link, $query);
             $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

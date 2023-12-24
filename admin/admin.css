@@ -1,0 +1,73 @@
+.admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.adminContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.adminContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.adminContainer2 h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.adminContainer h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.userCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
+
+.productCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
+
+/* all childs of productCard */
+.productCard > * {
+    padding: 0.5rem;
+}
+
+form.addProduct .btn {
+    margin-top: 1rem;
+    cursor: pointer;
+}
